@@ -1,0 +1,38 @@
+<!-- bookings/templates/bookings/flight_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight List</title>
+</head>
+<body>
+    <header>
+        <h1>Flight List</h1>
+    </header>
+    <main>
+        <div>
+            <h3>Flights:</h3>
+            <ul>
+                {% for flight in flights %}
+                    <li>
+                        <strong>Flight Details:</strong>
+                        <ul>
+                            {% for link in flight.purchaseLinks %}
+                                <li>
+                                    <strong>Provider:</strong> {{ link.providerId }}<br>
+                                    <strong>Commerce Name:</strong> {{ link.commerceName }}<br>
+                                    <strong>Currency:</strong> {{ link.currency }}<br>
+                                    <strong>Total Price:</strong> {{ link.totalPrice }}<br>
+                                    <strong>Seat Availability:</strong> {{ link.seatAvailability }}<br>
+                                    <strong>URL:</strong> <a href="{{ link.url }}" target="_blank">Book Now</a><br>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

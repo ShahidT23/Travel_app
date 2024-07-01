@@ -1,0 +1,59 @@
+<!-- bookings/templates/bookings/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bookings/style.css' %}" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Travel App</h1>
+    </header>
+    <main>
+      <div class="main-mosaic">
+        <a href="{% url 'search_flights' %}" class="mosaic-item">
+          <h3>Flights</h3>
+        </a>
+        <a href="{% url 'search_hotels' %}" class="mosaic-item">
+          <h3>Hotels</h3>
+        </a>
+        <a href="{% url 'search_packages' %}" class="mosaic-item">
+          <h3>Holiday Packages</h3>
+        </a>
+        <a href="{% url 'search_trains' %}" class="mosaic-item">
+          <h3>Train</h3>
+        </a>
+        <a href="{% url 'search_buses' %}" class="mosaic-item">
+          <h3>Bus</h3>
+        </a>
+      </div>
+      <div class="small-mosaic">
+        <div class="mosaic-item">
+          <h3>Airport Cabs</h3>
+        </div>
+
+        <a href="{% url 'search_hotels' %}" class="mosaic-item">
+          <h3>Homestays & Villas</h3>
+        </a>
+        <a href="{% url 'search_hotels' %}" class="mosaic-item">
+          <h3>Hourly Stays</h3>
+        </a>
+        <a href="{% url 'search_hotels' %}" class="mosaic-item">
+          <h3>Nearby Staycations</h3>
+        </a>
+        <div class="mosaic-item">
+          <h3>Travel Insurance</h3>
+        </div>
+        <div class="mosaic-item">
+          <h3>Flight Status</h3>
+        </div>
+        <div class="mosaic-item">
+          <h3>Outstation Cabs</h3>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

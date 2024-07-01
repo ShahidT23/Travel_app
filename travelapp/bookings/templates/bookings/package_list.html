@@ -1,0 +1,32 @@
+<!-- bookings/templates/bookings/package_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Package List</title>
+    <!-- Include CSS if needed -->
+</head>
+<body>
+    <header>
+        <h1>Holiday Packages</h1>
+    </header>
+    <main>
+        <h2>Search Results</h2>
+        {% if packages %}
+            <ul>
+                {% for package in packages %}
+                    <li>
+                        <strong>Package Name:</strong> {{ package.name }}<br>
+                        <strong>Price:</strong> {{ package.price }}<br>
+                        <strong>Description:</strong> {{ package.description }}<br>
+                        <!-- Add more details as per API response -->
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No packages found.</p>
+        {% endif %}
+    </main>
+</body>
+</html>

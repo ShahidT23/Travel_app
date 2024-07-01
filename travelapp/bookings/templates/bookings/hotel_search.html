@@ -1,0 +1,57 @@
+<!-- bookings/templates/bookings/hotel_search.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Hotels</title>
+  </head>
+  <body>
+    <header>
+      <h1>Search Hotels</h1>
+    </header>
+    <main>
+      {% if error_message %}
+      <p>{{ error_message }}</p>
+      {% endif %} {% if locations %}
+      <form method="post" action="{% url 'search_hotels' %}">
+        {% csrf_token %}
+        <input type="hidden" name="location" value="{{ location }}" />
+        <input type="hidden" name="check_in" value="{{ check_in }}" />
+        <input type="hidden" name="check_out" value="{{ check_out }}" />
+        <input type="hidden" name="room" value="{{ room }}" />
+        <input type="hidden" name="guests" value="{{ guests }}" />
+        <label for="selected_location_id">Select Location:</label>
+        <select name="selected_location_id" id="selected_location_id">
+          {% for loc in locations %}
+          <option value="{{ loc.geoId }}">
+            {{ loc.title }} - {{ loc.secondaryText }}
+          </option>
+          {% endfor %}
+        </select>
+        <button type="submit">Continue</button>
+      </form>
+      {% else %}
+      <form method="post" action="{% url 'search_hotels' %}">
+        {% csrf_token %}
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required />
+        <br />
+        <label for="check_in">Check In (Date):</label>
+        <input type="date" id="check_in" name="check_in" required />
+        <br />
+        <label for="check_out">Check Out (Date):</label>
+        <input type="date" id="check_out" name="check_out" required />
+        <br />
+        <label for="room">Room:</label>
+        <input type="text" id="room" name="room" required />
+        <br />
+        <label for="guests">Guests (number of guests):</label>
+        <input type="number" id="guests" name="guests" required />
+        <br />
+        <button type="submit">Search Hotels</button>
+      </form>
+      {% endif %}
+    </main>
+  </body>
+</html>

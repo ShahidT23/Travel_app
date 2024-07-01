@@ -1,0 +1,22 @@
+/* bookings/static/bookings/style.css */
+
+.main-mosaic, .small-mosaic {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.mosaic-item {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+.mosaic-item h3 {
+    margin: 10px 0;
+}
