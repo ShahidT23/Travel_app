@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cab Results</title>
+</head>
+<body>
+    <h1>Cab Results</h1>
+    {% if cabs_data %}
+        <ul>
+            {% for cab in cabs_data %}
+                <li>
+                    <h2>{{ cab.cab_type }}</h2>
+                    <p>Estimated Price: {{ cab.estimated_price }}</p>
+                    <p>Estimated Time: {{ cab.estimated_time }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No cabs found for the given criteria.</p>
+    {% endif %}
+</body>
+</html>

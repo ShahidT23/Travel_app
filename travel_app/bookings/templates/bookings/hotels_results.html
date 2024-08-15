@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Results</title>
+</head>
+<body>
+    <h1>Hotel Results</h1>
+    {% if hotels_data %}
+        <ul>
+            {% for hotel in hotels_data %}
+                <li>
+                    <h2>{{ hotel.hotel_name }}</h2>
+                    <p>Location: {{ hotel.location }}</p>
+                    <p>Price per night: {{ hotel.price_per_night }}</p>
+                    <p>Rating: {{ hotel.rating }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hotels found for the given criteria.</p>
+    {% endif %}
+</body>
+</html>

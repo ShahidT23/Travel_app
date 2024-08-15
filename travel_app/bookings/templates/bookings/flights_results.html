@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Results</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Flight Results</h1>
+    {% if flights_data %}
+        <ul>
+            {% for flight in flights_data %}
+                <li>{{ flight.airline }} - {{ flight.flight_number }}: {{ flight.price }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No flights found.</p>
+    {% endif %}
+</body>
+</html>
