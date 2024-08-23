@@ -1,7 +1,7 @@
 from django import forms
 
 class FlightSearchForm(forms.Form):
-    departure_city = forms.CharField(max_length=50, label="Departure City",
+    departure_city = forms.CharField(max_length=50,label="Departure City",
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Search for cities..'})
     )
     arrival_city = forms.CharField(max_length=50, label="Arrival City",
