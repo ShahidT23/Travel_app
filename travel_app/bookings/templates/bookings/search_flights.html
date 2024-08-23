@@ -65,10 +65,11 @@
         
   </div>
   <br>
-    <h1>Search Flights</h1>
+  <h2 class="text-center">Search Flight</h2>
+  <br>
 
 
-    <div class="container-fluid bg-primary text-white p-4">
+    <div style="border-radius: 30px; border: 8px solid rgb(29, 159, 177);" class="container-fluid bg-primary text-white p-4 "  >
         <form method="post" >
             {% csrf_token %}
             <div class="row">
@@ -111,13 +112,366 @@
                         {{ form.travel_class }}
                     </div>
                 </div>
-                <div class="col-md-1 ">
+                <div style="margin: 20px;" class="col-md-1 ">
                     <button type="submit" class="btn btn-warning text-dark btn-block">Search</button>
                 </div>
             </div>
         </form>
     </div>
     
+<br>
+
+
+<br>
+<h2 class="text-center">Exclusive Offers</h2>
+<br>
+
+<!-- Offers Section -->
+ 
+<div class="row row-cols-5 g-3">
+    <div class="col">
+      <div class="card">
+        <img src="https://plus.unsplash.com/premium_photo-1672082518029-8619a2c1e9dd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGlzY291bnR8ZW58MHx8MHx8fDA%3D" class="card-img-top" style="height: 180px;" alt="Hollywood Sign on The Hill">
+        <div class="card-body">
+          
+          <p class="card-text">
+            Discount On One day Trip
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://media.istockphoto.com/id/1862640710/photo/53-percentage-sign-isolated-on-transparent-background-53-percent-off-3d-53-png-3d-3d.webp?b=1&s=612x612&w=0&k=20&c=PcytDe-z5fW-tG99T-tkK8_6ON4yFgyvyEOj8nM-Jco=" class="card-img-top" style="height: 180px;" alt="Palm Springs Road">
+        <div class="card-body">
+          
+          <p class="card-text">
+            Discount on Flight To Delhi
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://plus.unsplash.com/premium_photo-1670509045675-af9f249b1bbe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZGlzY291bnR8ZW58MHx8MHx8fDA%3D" class="card-img-top" style="height: 180px;" alt="Los Angeles Skyscrapers">
+        <div class="card-body">
+         
+          <p class="card-text">
+           Voucher of 30% off
+           <br>
+        </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1532795986-dbef1643a596?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGRpc2NvdW50fGVufDB8fDB8fHww" class="card-img-top" style="height: 180px;" alt="Skyscrapers">
+        <div class="card-body">
+        
+          <p class="card-text">
+           Instent Sale on Ticket Booking
+          
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://plus.unsplash.com/premium_photo-1670151833597-32161060987f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZGlzY291bnR8ZW58MHx8MHx8fDA%3D" class="card-img-top" style="height: 180px;" alt="Skyscrapers">
+        <div class="card-body">
+      
+          <p class="card-text">
+            Book Seat And save Money
+           
+          </p>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+
+<br>
+<br>
+<!---->
+<!--Refund box-->
+
+<div class="box1">
+    <p class="refundp"><b> Refund* Due to Medical Reasons  :</b><br>
+      Presenting you an extraordinary offer in these unfavorable circumstances..<br>
+      Get a full refund on a domestic ticket in case you cancel it due to medical sickness..<br>
+      The Best Part - There are ZERO extra charges for this service.</p>
+    <div class="rectangle1"><img class="refundimg" src="data:image/jpeg;base64,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" alt="Refund"></div>
+  
+  </div>
+  <br>
+  <br>
+
+
+
+
+  <!--Famous Tourist Attraction-->
+
+<div class="offers-section1 bg-light">
+    <div class="container">
+      <h2 class="text-center">Famous Tourist Attraction</h2>
+      
+      <div class="row mt-4">
+        <div class="col-12 col-md-3">
+          <div class="offer-card1">
+            <a href="https://unsplash.com/s/photos/paris" target="_blank">
+            <img class="img1" src="https://thumbs.dreamstime.com/b/eiffel-tower-logo-icon-paris-city-france-flag-flat-design-silhouette-structure-320767312.jpg" alt="paris"><br>
+            <h6>Paris</h6>
+          </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="offer-card1">
+            <a href="https://unsplash.com/s/photos/andaman-and-nicobar-islands" target="_blank">
+              <img class="img1" src="https://img.freepik.com/free-vector/hand-drawn-thailand-travel-illustration_23-2150216097.jpg" alt="andman">
+            <h6>Andman</h6>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="offer-card1">
+            <a href="https://unsplash.com/s/photos/kashmir" target="_blank">
+            <img class="img1" src="https://img.freepik.com/free-vector/nature-geographic-landscape-vector_1308-61300.jpg?t=st=1720169424~exp=1720173024~hmac=e21b275a36f2a8bad6a1018e523879b6bd2df72e8a4b5c058243f621718f3c60&w=740"alt="kashmir"><br>
+         <h6>Kashmir</h6>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="offer-card1">
+            <a href="https://unsplash.com/s/photos/jaipur" target="_blank">
+            <img class="img1" src="https://i.pinimg.com/564x/66/0e/32/660e326c17017d51ad7b21306c039cbf.jpg" alt="Jaipur">
+            <h6>Jaipur</h6>
+          </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="offer-card1">
+            <a href="https://unsplash.com/s/photos/keral" target="_blank">
+            <img class="img1" src="https://img.freepik.com/premium-photo/illustration-kerala-backwaters-alleppey-houseboat-hill-station_985274-71.jpg?w=360" alt="Kerala">
+            <h6>Kerala</h6>
+          </a>
+          </div>
+        </div><div class="col-12 col-md-3">
+          <div class="offer-card1">
+            <a href="https://unsplash.com/s/photos/Dubai" target="_blank">
+            <img class="img1" src="https://thumbs.dreamstime.com/b/burj-al-arab-dubai-emirates-18824375.jpg" alt="Dubai">
+            <h6>Dubai</h6>
+          </a>
+          </div>
+        </div><div class="col-12 col-md-3">
+          <div class="offer-card1">
+            <a href="https://unsplash.com/s/photos/Bali" target="_blank">
+            <img class="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ0jE7ZMqSuuBu8FSzFk84SjyG_eSSEealIQ&s" alt="Bali">
+            <h6>Bali</h6>
+          </a>
+          </div>
+        </div><div class="col-12 col-md-3">
+          <div class="offer-card1">
+            <a href="https://unsplash.com/s/photos/leh-ladakh" target="_blank">
+            <img class="img1" src="https://cdn.dribbble.com/users/63407/screenshots/5903783/attachments/1269971/dribbble_india_stories_leh_detail.png?resize=400x300&vertical=center" alt="Leh">
+           <br> <h6>Leh</h6>
+          </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  
+  
+  <!--Enjoy Travel Blogs-->
+
+  <div class="wrapper">
+    <br><br>
+    <h2><center> Enjoy Fresh Travel Blogs</center></h2>
+    <br>
+    <div class="container1">
+        <div class="box">
+            <img class="photo" src="https://media.istockphoto.com/id/1155225100/photo/boat-in-dal-lake.webp?b=1&s=170667a&w=0&k=20&c=qVMJ-HFWIqmsAP-dXUDWA3g1aohgGkgBoYJhHSdgA7o=" alt="Boat in Dal Lake">
+            <div class="content">
+                <div class="tag">Holiday Destinations</div>
+                <h2>Boat in Dal Lake</h2>
+                <p>Experience the serene beauty of Dal Lake.</p>
+                <br>
+                <a href="b.html" class="read-more">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+            <img class="photo" src="https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZXVyb3BlfGVufDB8fDB8fHww" alt="European Adventure">
+            <div class="content">
+                <div class="tag">Holiday Destinations</div>
+                <h2>Rajasthan</h2>
+                <p>Experience the beauty of Rajasthan.</p>
+                <br>
+                <a href="c.html" class="read-more">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+            <img class="photo" src="https://images.unsplash.com/photo-1680204832081-6769d42b7a53?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bXVubmFyJTIwa2VyYWxhfGVufDB8fDB8fHww" alt="Munaar Kerala">
+            <div class="content">
+                <div class="tag">Holiday Destinations</div>
+                <h2>Munaar Kerala</h2>
+                <p>Explore the lush greenery of Munaar.</p>
+                <br>
+                <a href="d.html" class="read-more">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+            <img class="photo" src="https://media.istockphoto.com/id/1432307670/photo/woman-picking-tea-leaves-in-tea-plantation-girl-picking-tea-leaves-beautiful-asian-woman.webp?b=1&s=170667a&w=0&k=20&c=v_j2PVimbmWe7ECQpOTmy6BMho75okcxw28oNJGdPOQ=" alt="Tea Plantation">
+            <div class="content">
+                <div class="tag">Holiday Destinations</div>
+                <h2>Darjeeling</h2>
+                <p>Explore the evergreen Mountains in Darjeeling.</p>
+                <br>
+                <a href="e.html" class="read-more">Read More</a>
+            </div>
+        </div>
+    <div class="box">
+      <img class="photo" src="https://media.istockphoto.com/id/1155225100/photo/boat-in-dal-lake.webp?b=1&s=170667a&w=0&k=20&c=qVMJ-HFWIqmsAP-dXUDWA3g1aohgGkgBoYJhHSdgA7o=" alt="Boat in Dal Lake">
+      <div class="content">
+          <div class="tag">Holiday Destinations</div>
+          <h2>Boat in Dal Lake</h2>
+          <p>Experience the serene beauty of Dal Lake.</p>
+          <br>
+          <a href="b.html" class="read-more">Read More</a>
+      </div>
+  </div>
+    </div>
+  </div>
+
+  
+
+  <!---->
+<!--Footer-->
+
+
+<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    
+      <!-- Left -->
+  
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Company name
+            </h6>
+            <p>
+              Here you can use rows and columns to organize your footer content. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Angular</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">React</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Vue</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Laravel</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Pricing</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              info@example.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2024 Copyright:
+      <a class="text-reset fw-bold" href="#">Tourism</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+  
+  <!---->
+  
+
+
 
 
   
