@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Search Flights</title>
+    <title>Search Hotels</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/hotel.css' %}">
         <!--Link for connection of bootstrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
@@ -63,20 +64,321 @@
         
   </div>
   <br>
+
 <h1>Search Hotels</h1>
 <form method="post">
     {% csrf_token %}
     <label for="location">Location:</label>
-    <input type="text" id="location" name="location" required><br>
+    <input type="text" id="location" name="location" required>
     <label for="checkin_date">Check-in Date:</label>
-    <input type="date" id="checkin_date" name="checkin_date" required><br>
+    <input type="date" id="checkin_date" name="checkin_date" required>
     <label for="checkout_date">Check-out Date:</label>
-    <input type="date" id="checkout_date" name="checkout_date" required><br>
+    <input type="date" id="checkout_date" name="checkout_date" required>
     <label for="guests_number">Number of Guests:</label>
-    <input type="number" id="guests_number" name="guests_number" required><br>
+    <input type="number" id="guests_number" name="guests_number" required>
     <button type="submit">Search</button>
 </form>
+<!--cards-->
+<br>
+<h2>Exclusive Offers</h2>
+<div class="card-container">
+    <div class="card">
+        <img src="https://media.istockphoto.com/id/1034754206/photo/saving-discount-coupon-voucher-with-calculator-coupons-are-mock-up.webp?b=1&s=612x612&w=0&k=20&c=p8uANZJd5iBKau6UBJv6com3yKVszpk56pRlxlRO4l4=" alt="Card image">
+        <div class="card-body">
+            <p>Save 25% on city escapes. Explore today!</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://media.istockphoto.com/id/183764681/photo/3d-gift-card.webp?b=1&s=612x612&w=0&k=20&c=fpbQvDp9Kw_3kKa7R3kZuOxgVyYWOUqWc3ao_JZVcvQ=" alt="Card image">
+        <div class="card-body">
+            <p>10% off luxury stays. Experience opulence!.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGRpc2NvdW50JTIwY291cG9ufGVufDB8fDB8fHww" alt="Card image">
+        <div class="card-body">
+            <p>20% off adventure trips. Dare to explore!</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://media.istockphoto.com/id/593306220/photo/close-up-two-hand-holding-mobile-phone-with-promo-code.jpg?s=612x612&w=0&k=20&c=bwJ-taFNXD2fQ2lkf-o-TFKTTvRHZj3SO97SIk940c8=" alt="Card image">
+        <div class="card-body">
+            <p>15% off couples’ getaways. Create memories!</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://media.istockphoto.com/id/175199175/photo/woman-using-discount-coupon-on-a-digital-tablet.jpg?s=612x612&w=0&k=20&c=JDEOzWxe7TxxXIcu3ab3besfiBYxqLGQrT_if7MyjWI=" alt="Card image">
+        <div class="card-body">
+            <p>Up to 30% off beach getaways. Book now!</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://media.istockphoto.com/id/182479016/photo/3d-gift-card-white-with-red-bow.webp?b=1&s=612x612&w=0&k=20&c=lPCqiGTvEhgRfICWM0G7fJG2lgggJMo2NeJHnmXvWAo=" alt="Card image">
+        <div class="card-body">
+            <p>20% off family trips. Fun for all ages!</p>
+        </div>
+    </div>
+    
+    
+</div>
+<br>
+<!--section top chains-->
+<section id="testimonial">
+    <div class="my-5">
+      <div class="p-5 text-center bg-body-tertiary">
+        <div class="container py-5">
+          <h2 class="text-body-emphasis">
+            Our Top Hotel Chains</h2>
+          <p class="col-lg-8 mx-auto lead mt-2">
+            EaseMyTrip has a wide range of luxury and budget-friendly hotel chain properties. We have picked the finest hotels in India with world-class amenities. We bring you not only a stay option, but an experience in your budget to enjoy the luxury. We make sure that all the hotels are safe, hygienic, comfortable, and easily approachable when it comes to location. Book your hotel with EaseMyTrip and don't forget to grab an amazing hotel deal to save huge on your stay.
+          </p>
+        </div>
 
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-sm-12">
+              <img src="https://www.easemytrip.com/images/hotel-img/inde-hotels-4june24-logo.png" alt="techcrunch" height="60">
+            </div>
+            <div class="col-lg-3 col-sm-12">
+              <img src="https://www.easemytrip.com/images/hotel-img/shrigo-hp2.png" alt="mashable" height="60">
+            </div>
+            <div class="col-lg-3 col-sm-12">
+              <img src="https://www.easemytrip.com/images/hotel-img/royal-orchid-hp.png" alt="bizinsider" height="60">
+            </div>
+            <div class="col-lg-3 col-sm-12">
+              <img src="https://www.easemytrip.com/images/hotel-img/pride-hp-logo.png" alt="tnw" height="60">
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!---->
+<div class="container my-5">
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Cheapest Deals on Budget & Luxury Hotels are Available at EaseMyTrip</h1>
+        <p class="lead">Due to the huge influx of tourists in India, Choose to stay in luxury and comfort with the greatest discounts available on hotel bookings. We list the classiest budget hotels on our site along with some of the prominent international hotel chains of India including Oberoi Group, ITC Group, Taj Group, Le Meridian Group and many others.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Read More</button>
+          
+        </div>
+      </div>
+      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+        <img src="https://www.easemytrip.com/hotels/images/luxuary-hotel.webp" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+    </div>
+  </div>
+  <br>
+  <!---->
+  <h2>Why Book Hotels with EaseMyTrip.com</h2>
+<div class="card-container">
+    <div class="card">
+        <img src="https://media.istockphoto.com/id/1028621094/photo/service-bell-on-hotel-reception-desk.webp?b=1&s=612x612&w=0&k=20&c=gthmepxvDo-xEPUfLCbDyXInn4NUc32BJeMvLA6cEJI=" alt="Card image">
+        <div class="card-body">
+            <p>Best hotels available for different destinations to offer you the stay of a lifetime.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://media.istockphoto.com/id/184867163/photo/luxury-hotel-swiming-pool.webp?b=1&s=612x612&w=0&k=20&c=XRaX2ceO0c7VAf3KPRHUAtYVyav80f9VdJ8u8qq_Gwk=" alt="Card image">
+        <div class="card-body">
+            <p>Enjoy hotel bookings with the best offers and discounts and make your stay unforgettable</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://media.istockphoto.com/id/861322484/photo/businessman-touchscreen-gold-stars.webp?b=1&s=612x612&w=0&k=20&c=Cgi6rPtWaZBveGmN8Q0egd9b6fb4pzTyhgQtxuT-tXA=" alt="Card image">
+        <div class="card-body">
+            <p>All our hotels have good ratings on Trip Advisor and are recommended by users.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGhvdGVsJTIwcnByaWNlfGVufDB8fDB8fHww" alt="Card image">
+        <div class="card-body">
+            <p>Get excellent hotels/resorts at the best prices to pamper your desires.</p>
+        </div>
+    </div>
+    
+    
+    
+</div>
+<br>
+<!---->
+<h2>FAQ's</h2>
+    <hr>
+    <div class="faq-container">
+        <div class="faq-item">
+            <input type="checkbox" id="faq1">
+            <label for="faq1" class="faq-question">Can I book a hotel with a local ID?</label>
+            <div class="faq-answer">
+                <p>There is no law that allows hotel authorities to prohibit local couples from spending time with each other in a hotel room. Earlier hoteliers used to deny the local couples as they wanted to give preference to the guests who traveled from far as they usually occupy the room for more days but local couples hardly book a room for one day. However, due to the growing number of startups in the hotel industry, local couples can also book hotel rooms. There are some specific hotels which don't allow check-in with local ID proof but most of these are accepted now. Before booking a hotel, you may check on our website if someone can book a hotel with a local ID proof or not. But most of the hotels allow check-in with a valid ID proof.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <input type="checkbox" id="faq2">
+            <label for="faq2" class="faq-question">How can I get early check-in or late check-out in a hotel?</label>
+            <div class="faq-answer">
+                <p>Early check-ins or late checkouts in hotels are subject to availability and customers have to ask about this directly from the hotels. If a hotel reception is accommodating, they can provide their guests with both Early Check-in and Late Check-out or at least one of these. However, it also depends if rooms are available in the hotel or not. Usually, guests can enjoy free early check-in or late check-out of up to 2 hours.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <input type="checkbox" id="faq3">
+            <label for="faq3" class="faq-question">How can unmarried couples book hotels in India?</label>
+            <div class="faq-answer">
+                <p>No law denies the stay of unmarried couples from booking and staying in a hotel. However, it solely depends on the hotel authority to allow check-ins in such hotels. Choosing to stay together is a personal choice, which can't be restricted. Unmarried couples should always try to book their hotels online for 2 persons by checking earlier if the hotel provides them entry or not. Here is a tip, unmarried couples or any couple shouldn't indulge in activities that unnecessarily draw the attention of people. Generally, hotel reception checks the ID proofs and then allows the guests to check-in without making any fuss about if they are unmarried or married.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <input type="checkbox" id="faq4">
+            <label for="faq4" class="faq-question">How can I book cheap hotel rooms in 5-star hotels?</label>
+            <div class="faq-answer">
+                <p>There are several 5-star hotels in various cities that are available at cheaper rates. To book cheap hotel rooms in 5-star hotels, one of the most important things that you can do is to be flexible about your dates. If you are not planning to travel during weekends, a stay can be booked at very cheaper rates. One more tip is to book hotels in the off-season. By booking a hotel room at a location where there is a lesser crowd during a particular weather, customers can get really cheap deals. Suppose if you are only looking for a staycation or are willing to stay in 5-star hotels, then you can choose to visit cities like Jaipur, Agra, or any tourist place in Northern India during the summers. Booking hotels at hill stations during the rainy season can also be an opportunity to get rooms at cheaper rates.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <input type="checkbox" id="faq5">
+            <label for="faq5" class="faq-question">How to book a hotel online?</label>
+            <div class="faq-answer">
+                <p>Booking online hotels with EaseMyTrip is extremely hassle-free. Follow the below-mentioned steps to make your booking experience smooth:
+                <ol>
+                    <li>Visit EaseMyTrip and tap on the Hotels tab.</li>
+                    <li>Enter the city name, location, or specific hotel where you wish to book the stay at.</li>
+                    <li>Mention the Check-in and Check-out dates, as per your choice in the mentioned tab.</li>
+                    <li>Mention the number of rooms required as per the guest count in the "Rooms & Guests" section.</li>
+                    <li>Tap on the 'Search' button and you will be directed to a new page, where all the hotels are mentioned as per your requirements.</li>
+                    <li>After being redirected to the hotels, one can select the hotels as per the amenities provided. You can also customize your search by selecting the options from the top left corner, like price range, ratings, nearby attractions, and type of properties.</li>
+                    <li>After customizing the search, one can select the hotel and select the number of rooms required.</li>
+                    <li>After finalizing, you are required to tap on the 'Book Now' option.</li>
+                    <li>Fill in the details asked and tap on 'Continue to payment'.</li>
+                    <li>Now, make your payment using your preferred option. You can choose from a wide range of options like Debit cards, Credit cards, UPI, net banking, or wallet money.</li>
+                    <li>Once the payment is done, you will receive an Email and SMS for the same. You will also receive your e-ticket on mobile and email ID.</li>
+                </ol>
+                The process is simple and hassle-free. It is easy to book your travel online on the EaseMyTrip app/web. Save your time by booking hotels online and get the best deals with EaseMyTrip.</p>
+            </div>
+        </div>
+    </div>
+    <br>
+<!--footer-->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    
+      <!-- Left -->
+  
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Company name
+            </h6>
+            <p>
+              Here you can use rows and columns to organize your footer content. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Angular</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">React</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Vue</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Laravel</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Pricing</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              info@example.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2024 Copyright:
+      <a class="text-reset fw-bold" href="#">Tourism</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+  
 
 </body>
 </html>

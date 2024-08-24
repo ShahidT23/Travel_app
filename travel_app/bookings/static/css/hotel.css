@@ -1,0 +1,118 @@
+form {
+    background-color:#0d6efd; /* Sky-blue background */
+    padding: 20px; /* Add some padding around the form */
+    border-radius: 8px; /* Rounded corners for a nicer look */
+    display: flex; /* Use flexbox for horizontal layout */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Evenly space out items */
+    gap: 15px; /* Add some spacing between form elements */
+    flex-wrap: wrap; /* Wrap items in case of narrow screens */
+}
+
+/* Style each form element */
+label {
+    font-weight: bold; /* Make the labels bold */
+    margin-right: 5px; /* Add some space after each label */
+    color: aliceblue;
+}
+
+input {
+    padding: 5px; /* Add padding inside input fields */
+    border-radius: 4px; /* Rounded corners for input fields */
+    border: 1px solid #ccc; /* Light grey border */
+    
+}
+
+/* Style the submit button */
+button {
+    background-color: #ffc107;; /* Green background */
+    color: white; /* White text color */
+    padding: 10px 15px; /* Padding for button */
+    border: none; /* Remove default border */
+    border-radius: 30%; /* Rounded corners for button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Change button appearance on hover */
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of cards to the next line */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the container */
+    justify-content: center; /* Center cards horizontally */
+}
+
+.card {
+    width: 200px; /* Set card width */
+    height: 120px; /* Set card height */
+    border: 1px solid #ddd; /* Light border around cards */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for a slight 3D effect */
+    background-color: #fff; /* White background for cards */
+    display: flex; /* Flexbox for content alignment */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+}
+
+.card img {
+    max-width: 100%; /* Ensure image fits within the card */
+    max-height: 100%; /* Ensure image fits within the card */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-bottom: 1px solid #ddd; /* Add a border below the image */
+}
+
+.card-body {
+    padding: 10px; /* Padding inside the card body */
+}
+h2{
+    justify-content: center;
+   text-align: center;
+}
+.icon-square {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+  }
+  .innerWrap {
+    width: 1200px;
+    margin: 26px auto;
+    padding: 0 15px;
+  }
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.faq-question {
+    display: block;
+    padding: 15px;
+    background-color: #141313;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.faq-answer {
+    padding: 15px;
+    background-color: #fff;
+    display: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + .faq-question + .faq-answer {
+    display: block;
+}
