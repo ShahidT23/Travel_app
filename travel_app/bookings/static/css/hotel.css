@@ -25,7 +25,7 @@ input {
 
 /* Style the submit button */
 button {
-    background-color: #ffc107;; /* Green background */
+    background-color: #ffc107;/* Green background */
     color: white; /* White text color */
     padding: 10px 15px; /* Padding for button */
     border: none; /* Remove default border */
